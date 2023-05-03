@@ -3,7 +3,7 @@
 }
 
 div {
-text-align: center;
+  text-align: center;
 }
 
 img {
@@ -13,13 +13,12 @@ img {
   margin: 200px auto 10px;
 }
 
-
 h1 {
   color: whitesmoke;
-  font-family: 'Quicksand', sans-serif;
+  font-family: "Quicksand", sans-serif;
 }
 
 h2 {
   color: whitesmoke;
-  font-family: 'Caveat', cursive;
+  font-family: "Caveat", cursive;
 }
