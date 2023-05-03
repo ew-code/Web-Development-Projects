@@ -1,0 +1,25 @@
+* {
+  background-color: black;
+}
+
+div {
+text-align: center;
+}
+
+img {
+  border: 10px solid white;
+  height: 400px;
+  display: block;
+  margin: 200px auto 10px;
+}
+
+
+h1 {
+  color: whitesmoke;
+  font-family: 'Quicksand', sans-serif;
+}
+
+h2 {
+  color: whitesmoke;
+  font-family: 'Caveat', cursive;
+}
