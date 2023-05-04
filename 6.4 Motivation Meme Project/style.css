@@ -7,18 +7,20 @@ div {
 }
 
 img {
-  border: 10px solid white;
+  border: 5px solid white;
   height: 400px;
   display: block;
   margin: 200px auto 10px;
 }
 
 h1 {
-  color: whitesmoke;
-  font-family: "Quicksand", sans-serif;
+  color: white;
+  /* font-family: "Quicksand", sans-serif; */
+  font-family: 'Libre Baskerville', serif;
+  text-transform: uppercase;
 }
 
 h2 {
-  color: whitesmoke;
+  color: white;
   font-family: "Caveat", cursive;
 }
