@@ -12,10 +12,37 @@ body {
 
 h1 {
   font-size: 5rem;
+  display: inline-block;
+  margin-right: 800px;
+  margin-bottom: 50px;
+}
+
+.left {
+  display: inline-block;
+  margin-right: 900px;
+  position: relative;
+}
+
+.right {
+  display: inline-block;
+  margin-left: 850px;
+  position: absolute;
+  left: 150px;
+  margin-right: 40px;
+}
+
+.tile-image {
+  width: 300px;
+  float: left;
+  margin-right: 50px;
+}
+
+.card-title {
+  margin-bottom: 0;
+  text-align: left;
 }
 
 footer {
   text-align: right;
   color: midnightblue;
 }
-
