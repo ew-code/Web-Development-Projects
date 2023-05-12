@@ -19,53 +19,64 @@
     But grid lines are transparent!
     */
       body {
-        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
         margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        padding: 0;
       }
 
       .container {
-        background-color: #000;
-        height: 100vh;
+        height: 748px;
+        width: 748px;
         display: grid;
-        gap: 0.5rem;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 1fr;
+        background-color: #000;
+        grid-template-columns: 320px 198px 153px 50px;
+        grid-template-rows: 414px 130px 155px 22px;
+        gap: 9px;
       }
 
-      .square1 {
+      .item {
+        background-color: #f0f1ec;
+      }
+
+      .red {
         background-color: #e72f24;
-         /* grid-template-columns: 320px 401px; */
       }
 
-      .square2 {
-        background-color: #f0f1ec;
-      
+      .white1 {
+        grid-column: span 3;
       }
 
-      .square3 {
-        background-color: #f0f1ec;
+      .white2 {
+        grid-row: span 2;
       }
 
-      .square4 {
-        background-color: #f0f1ec;
+      .white3 {
+        grid-area: 2 / 2 / 4 /4;
       }
 
-      .square5 {
+      .blue {
         background-color: #004592;
+        border-bottom: 10px solid #000;
       }
 
-      .square6 {
-        background-color: #f0f1ec;
+      .white4 {
+        grid-row: span 2;
       }
 
-      .square7 {
-        background-color: #f0f1ec;
-      }
-
-      .square8 {
+      .yellow {
         background-color: #f9d01e;
       }
-      .square9 {
+
+      .black {
         background-color: #232629;
       }
 
@@ -74,16 +85,15 @@
 
   <body>
     <!-- Write your HTML here -->
-    <div class="container">
-      <div class="square1">🤠</div>
-      <div class="square2">👨‍🚀</div>
-      <div class="square3">👨‍🚀</div>
-      <div class="square4">👨‍🚀</div>
-      <div class="square5">👨‍🚀</div>
-      <div class="square6">👨‍🚀</div>
-      <div class="square7">👨‍🚀</div>
-      <div class="square8">👨‍🚀</div>
-      <div class="square9">👨‍🚀</div>
-    </div>
+     <div class="container">
+   <div class="item red"></div>
+   <div class="item white1"></div>
+   <div class="item white2"></div>
+   <div class="item white3"></div>
+   <div class="item blue"></div>
+   <div class="item white4"></div>
+   <div class="item"></div>
+   <div class="item yellow"></div>
+   <div class="item black"></div>
   </body>
 </html>
