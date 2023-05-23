@@ -17,99 +17,47 @@
   </head>
 
   <body class="body bg-dark">
-    <section class="header">
-      <div class="px-3 py-2 text-bg-dark">
-        <div class="container">
-          <div
-            class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start"
-          >
-            <a
-              href="/"
-              class="d-flex align-items-center my-2 my-lg-0 me-lg-auto text-white text-decoration-none"
-            >
-              <svg
-                class="bi me-2"
-                width="40"
-                height="32"
-                role="img"
-                aria-label="Bootstrap"
-              >
-                <use xlink:href="#bootstrap"></use>
-              </svg>
-            </a>
 
-            <ul
-              class="nav col-12 col-lg-auto my-2 justify-content-center my-md-0 text-small"
-            >
-              <li>
-                <a href="#" class="nav-link text-secondary">
-                  <svg class="bi d-block mx-auto mb-1" width="24" height="24">
-                    <use xlink:href="#home"></use>
-                  </svg>
-                  Home
-                </a>
-              </li>
-              <li>
-                <a href="#" class="nav-link text-white">
-                  <svg class="bi d-block mx-auto mb-1" width="24" height="24">
-                    <use xlink:href="#speedometer2"></use>
-                  </svg>
-                  Dashboard
-                </a>
-              </li>
-              <li>
-                <a href="#" class="nav-link text-white">
-                  <svg class="bi d-block mx-auto mb-1" width="24" height="24">
-                    <use xlink:href="#table"></use>
-                  </svg>
-                  Orders
-                </a>
-              </li>
-              <li>
-                <a href="#" class="nav-link text-white">
-                  <svg class="bi d-block mx-auto mb-1" width="24" height="24">
-                    <use xlink:href="#grid"></use>
-                  </svg>
-                  Products
-                </a>
-              </li>
-              <li>
-                <a href="#" class="nav-link text-white">
-                  <svg class="bi d-block mx-auto mb-1" width="24" height="24">
-                    <use xlink:href="#people-circle"></use>
-                  </svg>
-                  Customers
-                </a>
-              </li>
-            </ul>
-            <button type="button" class="btn btn-warning">Sign-up</button>
-          </div>
-        </div>
-      </div>
+    <section class="header text-bg-info p-3">
+
+      <div class="container">
+    <header class="d-flex flex-wrap justify-content-center py-3 mb-0">
+      <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
+        <!-- <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg> -->
+        <span class="fs-4 text-white">Simple header</span>
+      </a>
+
+      <ul class="nav nav-pills">
+        <li class="nav-item"><a href="#" class="nav-link active bg-dark" aria-current="page">Home</a></li>
+        <li class="nav-item"><a href="#" class="nav-link text-white">Features</a></li>
+        <li class="nav-item"><a href="#" class="nav-link text-white">Pricing</a></li>
+        <li class="nav-item"><a href="#" class="nav-link text-white">FAQs</a></li>
+        <li class="nav-item"><a href="#" class="nav-link text-white">About</a></li>
+      </ul>
+    </header>
+  </div>
+
     </section>
 
-    <section class="hero my-xxl-5">
-      <div class="bg-dark text-secondary px-4 py-5 text-center">
-        <div class="py-5">
-          <h1 class="display-5 fw-bold text-white">Porfolio Website</h1>
-          <div class="col-lg-6 mx-auto">
-            <p class="fs-5 mb-4 text-white">
-              My name is Ewelina.I'm a Automation Tester and in my spare time I
-              like to learn how to create websites (using html, css,
-              javaScript).
-            </p>
-            <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
-              <button
-                type="button"
-                class="btn btn-outline-info btn-lg px-4 me-sm-3 fw-bold"
-              >
-               <a href="#about_me">About me</a>
-              </button>
-            </div>
-          </div>
+<div class="container col-xxl-8 px-4 py-5 bg-dark">
+    <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+      <div class="col-10 col-sm-8 col-lg-6">
+        <img src="./assets/images/programmer.jpg" class="d-block mx-lg-auto img-fluid rounded-4 border-5 border border-white" alt="programmer" width="700" loading="lazy">
+      </div>
+      <div class="col-lg-6">
+        <h1 class="display-5 fw-bold lh-1 mb-3 text-white">Porfolio Website</h1>
+        <p class="fs-5 mb-4 text-white">My name is Ewelina.I'm a Automation Tester and in my spare time I
+like to learn how to create websites (using html, css,
+javaScript).</p>
+        <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+          <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+   <button type="button" class="btn btn-outline-info btn-lg px-4 me-sm-3 fw-bold">About me<a href="#about_me"></a></button>
+ </div>
         </div>
       </div>
-    </section>
+    </div>
+  </div>
+    
     <!-- <hr class="featurette-divider bg-dark" /> -->
 <!--  -->
   
@@ -117,7 +65,7 @@
     <div class="container">
             <!-- <div class="col-md-8"> -->
         <img
-          class="profile-img float-end border-3 border border-light-subtle"
+          class="profile-img float-end border-5 border border-white"
           src="./assets/images/Profilowe.jpg" alt="Profile picture"
         />
         <!-- bd-placeholder-img featurette-image img-fluid mx-auto -->
@@ -271,144 +219,15 @@
               </div>
             </div>
           </div>
-
-          <!-- <div class="col"> -->
-            <!-- <div class="card shadow-sm"> -->
-              <!-- <svg -->
-                <!-- class="bd-placeholder-img card-img-top" -->
-                <!-- width="100%" -->
-                <!-- height="225" -->
-                <!-- xmlns="http://www.w3.org/2000/svg" -->
-                <!-- role="img" -->
-                <!-- aria-label="Placeholder: Thumbnail" -->
-                <!-- preserveAspectRatio="xMidYMid slice" -->
-                <!-- focusable="false" -->
-              <!-- > -->
-                <!-- <title>Placeholder</title> -->
-                <!-- <rect width="100%" height="100%" fill="#55595c"></rect> -->
-                <!-- <text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text> -->
-              <!-- </svg> -->
-              <!-- <div class="card-body"> -->
-                <!-- <p class="card-text"> -->
-                  <!-- This is a wider card with supporting text below as a natural -->
-                  <!-- lead-in to additional content. This content is a little bit -->
-                  <!-- longer. -->
-                <!-- </p> -->
-                <!-- <div class="d-flex justify-content-between align-items-center"> -->
-                  <!-- <div class="btn-group"> -->
-                    <!-- <button -->
-                      <!-- type="button" -->
-                      <!-- class="btn btn-sm btn-outline-secondary" -->
-                    <!-- > -->
-                      <!-- View -->
-                    <!-- </button> -->
-                    <!-- <button -->
-                      <!-- type="button" -->
-                      <!-- class="btn btn-sm btn-outline-secondary" -->
-                    <!-- > -->
-                      <!-- Edit -->
-                    <!-- </button> -->
-                  <!-- </div> -->
-                  <!-- <small class="text-body-secondary">9 mins</small> -->
-                <!-- </div> -->
-              <!-- </div> -->
-            <!-- </div> -->
-          <!-- </div> -->
-
-          <!-- <div class="col"> -->
-            <!-- <div class="card shadow-sm"> -->
-              <!-- <svg -->
-                <!-- class="bd-placeholder-img card-img-top" -->
-                <!-- width="100%" -->
-                <!-- height="225" -->
-                <!-- xmlns="http://www.w3.org/2000/svg" -->
-                <!-- role="img" -->
-                <!-- aria-label="Placeholder: Thumbnail" -->
-                <!-- preserveAspectRatio="xMidYMid slice" -->
-                <!-- focusable="false" -->
-              <!-- > -->
-                <!-- <title>Placeholder</title> -->
-                <!-- <rect width="100%" height="100%" fill="#55595c"></rect> -->
-                <!-- <text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text> -->
-              <!-- </svg> -->
-              <!-- <div class="card-body"> -->
-                <!-- <p class="card-text"> -->
-                  <!-- This is a wider card with supporting text below as a natural -->
-                  <!-- lead-in to additional content. This content is a little bit -->
-                  <!-- longer. -->
-                <!-- </p> -->
-                <!-- <div class="d-flex justify-content-between align-items-center"> -->
-                  <!-- <div class="btn-group"> -->
-                    <!-- <button -->
-                      <!-- type="button" -->
-                      <!-- class="btn btn-sm btn-outline-secondary" -->
-                    <!-- > -->
-                      <!-- View -->
-                    <!-- </button> -->
-                    <!-- <button -->
-                      <!-- type="button" -->
-                      <!-- class="btn btn-sm btn-outline-secondary" -->
-                    <!-- > -->
-                      <!-- Edit -->
-                    <!-- </button> -->
-                  <!-- </div> -->
-                  <!-- <small class="text-body-secondary">9 mins</small> -->
-                <!-- </div> -->
-              <!-- </div> -->
-            <!-- </div> -->
-          <!-- </div> -->
-          <!-- <div class="col"> -->
-            <!-- <div class="card shadow-sm"> -->
-              <!-- <svg -->
-                <!-- class="bd-placeholder-img card-img-top" -->
-                <!-- width="100%" -->
-                <!-- height="225" -->
-                <!-- xmlns="http://www.w3.org/2000/svg" -->
-                <!-- role="img" -->
-                <!-- aria-label="Placeholder: Thumbnail" -->
-                <!-- preserveAspectRatio="xMidYMid slice" -->
-                <!-- focusable="false" -->
-              <!-- > -->
-                <!-- <title>Placeholder</title> -->
-                <!-- <rect width="100%" height="100%" fill="#55595c"></rect> -->
-                <!-- <text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text> -->
-              <!-- </svg> -->
-              <!-- <div class="card-body"> -->
-                <!-- <p class="card-text"> -->
-                  <!-- This is a wider card with supporting text below as a natural -->
-                  <!-- lead-in to additional content. This content is a little bit -->
-                  <!-- longer. -->
-                <!-- </p> -->
-                <!-- <div class="d-flex justify-content-between align-items-center"> -->
-                  <!-- <div class="btn-group"> -->
-                    <!-- <button -->
-                      <!-- type="button" -->
-                      <!-- class="btn btn-sm btn-outline-secondary" -->
-                    <!-- > -->
-                      <!-- View -->
-                    <!-- </button> -->
-                    <!-- <button -->
-                      <!-- type="button" -->
-                      <!-- class="btn btn-sm btn-outline-secondary" -->
-                    <!-- > -->
-                      <!-- Edit -->
-                    <!-- </button> -->
-                  <!-- </div> -->
-                  <!-- <small class="text-body-secondary">9 mins</small> -->
-                <!-- </div> -->
-              <!-- </div> -->
-            <!-- </div> -->
-          <!-- </div> -->
-
         </div>
       </div>
     </section>
 
 
-    <section class="footer bg-dark text-white">
+    <section class="footer text-white text-bg-info p-3">
       <div class="container">
         <footer
-          class="d-flex flex-wrap justify-content-between align-items-center py-3 my-5"
+          class="d-flex flex-wrap justify-content-between align-items-center py-3 my-0"
         >
           <div class="col-md-4 d-flex align-items-center">
             <a
