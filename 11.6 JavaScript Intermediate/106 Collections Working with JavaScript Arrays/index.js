@@ -4,14 +4,14 @@ fruits.length; //6
 fruits.includes(4); //return true or false
 
 
-var guest = prompt("Enter your name:");
+var guestName = prompt("Enter your name:");
 var guestList = ["Angela", "Jack", "Pam", "James", "Lara", "Jason"];
-var nameCheck = guestList.includes(guest);
+var nameCheck = guestList.includes(guestName);
 
 if (nameCheck === true) {
-    alert("Welcome");
+    alert("Welcome.");
 } else {
-    alert("Sorry,mabe next time");
+    alert("Sorry,mabe next time.");
 }
 
 // console.log(guestList.length);
