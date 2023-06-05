@@ -5,30 +5,27 @@ while (i < 2) {
     i++;
 }
 
+"99 bottles of beer on the wall, 99 bottles of beer.Take one down and pass it around, 98 bottles of beer on the wall."
+
+"1 bottle of beer on the wall,1 bottle of beer.Take one down and pass it around, no more bottles of beer on the wall."
+
+"No more bottles of beer on the wall, no more bottles of beer.Go to th store and buy some more, 99 bottles of beer on the wall."
 
 var output = [];
-var count = 1;
-function fizzBuzz() {
+var beer = 99;
+function beer() {
 
-    while (count <= 100) {
+    while (beer >= 1) {
 
-        if (count % 3 === 0 && count % 5 === 0) {
-            output.push("FizzBuzz");
+        if (beer === 99) {
+            console.log(output);
         }
 
-        if (count % 3 === 0) {
-            output.push("Fizz");
+        if (beer === 1) {
+            console.log(output);
         }
 
-        else if (count % 5 === 0) {
-            output.push("Buzz");
-        }
-
-        else {
-            output.push(count);
-        }
-
-        count++;
+        beer--;
 
     }
         console.log(output);
