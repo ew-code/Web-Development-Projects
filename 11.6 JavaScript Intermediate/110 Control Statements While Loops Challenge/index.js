@@ -5,14 +5,15 @@ while (i < 2) {
     i++;
 }
 
+DO SKORYGOWANIA!
 
 var bottle = 99;
 function beer() {
 
-    while (bottle >= 1 ) {
+    while (bottle >= 1) {
 
         if (bottle <= 99) {
-            console.log(bottle + " bottles of beer on the wall, 99 bottles of beer.Take one down and pass it around, " + bottle + " bottles of beer on the wall.");
+            console.log(bottle + " bottles of beer on the wall," + bottle + " bottles of beer.Take one down and pass it around, " + bottle + " bottles of beer on the wall.");
         }
 
         if (bottle === 1) {
@@ -24,4 +25,4 @@ function beer() {
 
     console.log("No more bottles of beer on the wall, no more bottles of beer.Go to th store and buy some more, 99 bottles of beer on the wall.");
 
-    }
+}
