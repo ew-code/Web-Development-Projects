@@ -1,8 +1,11 @@
+var randomNumber1;
+var randomNumber2;
+
 document.querySelector(".img1").setAttribute("onclick", "roleDice1()");
 document.querySelector(".img2").setAttribute("onclick", "roleDice2()");
 
 function roleDice1() {
-    var randomNumber1 = Math.floor(Math.random() * 6) + 1;
+    randomNumber1 = Math.floor(Math.random() * 6) + 1;
 
     if (randomNumber1 === 1) {
         document.querySelector(".img1").setAttribute("src", "./images/dice1.png");
@@ -27,11 +30,11 @@ function roleDice1() {
     if (randomNumber1 === 6) {
         document.querySelector(".img1").setAttribute("src", "./images/dice6.png");
     }
-    return randomNumber1
+    wins();
 }
 
 function roleDice2() {
-    var randomNumber2 = Math.floor(Math.random() * 6) + 1;
+    randomNumber2 = Math.floor(Math.random() * 6) + 1;
 
     if (randomNumber2 === 1) {
         document.querySelector(".img2").setAttribute("src", "./images/dice1.png");
@@ -56,21 +59,21 @@ function roleDice2() {
     if (randomNumber2 === 6) {
         document.querySelector(".img2").setAttribute("src", "./images/dice6.png");
     }
-    return randomNumber2
+    wins();
 }
 
 
-function winner() {
-    if (randomNumber1 > randomNumber2 ) {
-        document.querySelector("h1").innerHTML = "Player 1 Wins! 🚩";
+function wins() {
+    var h1Element = document.querySelector("h1")
+    if (randomNumber1 > randomNumber2) {
+        h1Element.innerHTML = "Player 1 Wins!";
     }
 
-    if (randomNumber1 < randomNumber2 ) {
-        document.querySelector("h1").innerHTML = "Player 2 Wins! 🚩";
+    else if (randomNumber1 < randomNumber2) {
+        h1Element.innerHTML = "Player 2 Wins!";
     }
 
-    if (randomNumber1 == randomNumber2 ) {
-     document.querySelector("h1").innerHTML = "Draw!";
+    else {
+        h1Element.innerHTML = "Draw!";
     }
 }
-
