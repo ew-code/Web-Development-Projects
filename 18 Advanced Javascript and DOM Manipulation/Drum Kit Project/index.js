@@ -1,37 +1,61 @@
 var numberOfDrumButtons = document.querySelectorAll(".drum").length;
 
 for (var i = 0; i < numberOfDrumButtons; i++) {
-    document.querySelectorAll(".drum")[i].addEventListener("click", playDrum);
+    document.querySelectorAll(".drum")[i].addEventListener("click", function () {
+
+        var buttonInner
+        // switch statement
+ switch (key) {
+    case value:
+
+        break;
+
+    default:
+        break;
+ }
+
+    });
+
 }
 
-function playDrum() {
-    console.lof(this.innerHTML);
-}
 
 
 
-// function playDrum() {
-    // var audio = new Audio('./sounds/tom-1.mp3');
-    // audio.play();
+// for (var i = 0; i < numberOfDrumButtons; i++) {
+    // document.querySelectorAll(".drum")[i].addEventListener("click", playDrum);
 // }
 
+// function playDrum() {
+    // var audio = new Audio('./sounds/tom-1.mp3'
+    // audio.play();
+// }
+// --------------------------------------------------------------------------------------
+// Javascript Object Example:
 
+// var bellBoy1 = {
+    // name: "Tim",
+    // age: 19 ,
+    // hasWorkPermit: true,
+    // languages: ["Polish", "English"]
+// }
 
+// odwołanie do nazwy obiektu:
+// bellBoy1.name
 
+// Constructor Function: nazwa z duzej litery po tym poznajemy ze to funcja konstruktor
 
+// function BellBoy (name, age, hasWorkPermit, languages) {
+    // this.name = name;
+    // this.age = age;
+    // this.hasWorkPermit = hasWorkPermit;
+    // this.languages = languages;
+// }
 
+// initialise Object:
 
+// var bellBoy1 = new BellBoy("Tim", 19, true, ["Fremch", "English"]);
 
-
-
-
-
-
-
-
-
-
-
+// var bellBoy1 = new BellBoy("Jim", 21, false, ["English", "German"]);
 
 // --------------------------------------------------------------------------------------
 // Higher Order Functions (are functions that can take other functions as inputs)
