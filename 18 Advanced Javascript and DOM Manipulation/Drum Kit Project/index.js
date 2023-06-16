@@ -50,6 +50,21 @@ for (var i = 0; i < numberOfDrumButtons; i++) {
 
 }
 
+document.addEventListener("keydown", function (event) {
+    // alert("Key was pressed");
+    console.log(event);
+})
+
+const input = document.querySelector("input");
+const log = document.getElementById("log");
+
+input.addEventListener("keydown", logKey);
+
+function logKey(e) {
+    log.textContent += ` ${e.code}`;
+}
+
+
 let keyboardEvent = document.addEventListener("keydown", function (event) {
     // alert("Key was pressed");
     console.log(event);
@@ -105,35 +120,11 @@ window.addEventListener(
 );
 
 
-KeyboardEvent.key
-key: 'w'
-key: 'a'
-key: 's'
-key: 'd'
-key: 'j'
-key: 'k'
-key: 'l'
-
-const input = document.querySelector("input");
-const log = document.getElementById("log");
-
-input.addEventListener("keydown", logKey);
-
-function logKey(e) {
-    log.textContent += ` ${e.code}`;
-}
-
 // addEventListener("keydown", function ()  {
 // alert("Key was pressed");
 // })
 
-document.addEventListener("keydown", function (event) {
-    // alert("Key was pressed");
-    console.log(event);
-})
-
 // KeyboardEvent.key
-
 
 // Methods Metoda to funkcja która jest powiązana z obiektem
 
