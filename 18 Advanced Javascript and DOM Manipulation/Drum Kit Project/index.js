@@ -50,71 +50,76 @@ for (var i = 0; i < numberOfDrumButtons; i++) {
 
 }
 
+var keyboardEvent =
+    
+    window.addEventListener(
+        "keydown",
+        (event) => {
+            if (event.defaultPrevented) {
+                return; // Do nothing if the event was already processed
+            }
 
-var numberOfDrumButtons = document.querySelectorAll(".drum").length;
+            switch (event.key) {
+                case "w":
+                    // Do something for "down arrow" key press.
+                    break;
+                case "a":
+                    // Do something for "up arrow" key press.
+                    break;
+                case "s":
+                    // Do something for "left arrow" key press.
+                    break;
+                case "d":
+                    // Do something for "right arrow" key press.
+                    break;
+                case "j":
+                    // Do something for "enter" or "return" key press.
+                    break;
+                case "k":
+                    // Do something for "esc" key press.
+                    break;
+                case "l":
+                    // Do something for "esc" key press.
+                    break;
+                default:
+                    return; // Quit when this doesn't handle the key event.
+            }
 
-for (var i = 0; i < numberOfDrumButtons; i++) {
-    document.querySelectorAll(".drum")[i].addEventListener("click", function () {
+            // Cancel the default action to avoid it being handled twice
+            event.preventDefault();
+        },
+        true
+    );  
+    
+    
+KeyboardEvent.key
+key: 'w'
+key: 'a'
+key: 's'
+key: 'd'
+key: 'j'
+key: 'k'
+key: 'l'
 
-        var buttonInnerHTML = this.innerHTML;
+const input = document.querySelector("input");
+const log = document.getElementById("log");
 
-        // switch statement
-        switch (buttonInnerHTML) {
-            case "w":
-                var tom1 = new Audio("./sounds/tom-1.mp3");
-                tom1.play();
-                break;
+input.addEventListener("keydown", logKey);
 
-            case "a":
-                var tom2 = new Audio("./sounds/tom-2.mp3");
-                tom2.play();
-                break;
-
-            case "s":
-                var tom3 = new Audio("./sounds/tom-3.mp3");
-                tom3.play();
-                break;
-
-            case "d":
-                var tom4 = new Audio("./sounds/tom-4.mp3");
-                tom4.play();
-                break;
-
-            case "j":
-                var snare = new Audio("./sounds/snare.mp3");
-                snare.play();
-                break;
-
-            case "k":
-                var crash = new Audio("./sounds/crash.mp3");
-                crash.play();
-                break;
-
-            case "l":
-                var kick = new Audio("./sounds/kick-bass.mp3");
-                kick.play();
-                break;
-
-            default: console.log(buttonInnerHTML);
-                break;
-        }
-
-    });
-
+function logKey(e) {
+    log.textContent += ` ${e.code}`;
 }
 
+// addEventListener("keydown", function ()  {
+    // alert("Key was pressed");
+// })
 
-
-addEventListener("keydown", function ()  {
-    alert("Key was pressed");
-})
-
-addEventListener("keydown", function (event) {
-    alert("Key was pressed");
+document.addEventListener("keydown", function (event) {
+    // alert("Key was pressed");
     console.log(event);
 })
 
-KeyboardEvent.key
+// KeyboardEvent.key
 
 
 // Methods Metoda to funkcja która jest powiązana z obiektem
