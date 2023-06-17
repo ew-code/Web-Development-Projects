@@ -50,26 +50,11 @@ for (var i = 0; i < numberOfDrumButtons; i++) {
 
 }
 
-document.addEventListener("keydown", function (event) {
+// document.addEventListener("keydown", function (event) {
     // alert("Key was pressed");
-    console.log(event);
-})
-
-const input = document.querySelector("input");
-const log = document.getElementById("log");
-
-input.addEventListener("keydown", logKey);
-
-function logKey(e) {
-    log.textContent += ` ${e.code}`;
-}
-
-
-let keyboardEvent = document.addEventListener("keydown", function (event) {
-    // alert("Key was pressed");
-    console.log(event);
-})
-
+    // console.log(event);
+// })
+// 
 window.addEventListener(
     "keydown",
     (event) => {
@@ -90,7 +75,7 @@ window.addEventListener(
 
             case "s":
                 var tom3 = new Audio("./sounds/tom-3.mp3");
-                tom2.play();
+                tom3.play();
                 break;
             case "d":
                 var tom4 = new Audio("./sounds/tom-4.mp3");
