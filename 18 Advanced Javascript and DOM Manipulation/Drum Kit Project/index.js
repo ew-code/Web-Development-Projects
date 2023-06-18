@@ -1,3 +1,5 @@
+// LEKCJA 146 do powtórzenia i napisania w konsoli!!!
+
 
 //Detecting Button Press
 
@@ -9,16 +11,24 @@ for (var i = 0; i < numberOfDrumButtons; i++) {
         var buttonInnerHTML = this.innerHTML;
 
         makeSound(buttonInnerHTML);
+        buttonAnimation(buttonInnerHTML);
+
     });
 
 }
 
 //Detecting Keyboard Press
 
-document.addEventListener("keydown", function(event) {
+document.addEventListener("keydown", function (event) {
     makeSound(event.key);
+    buttonAnimation(event.key);
 
 })
+//w tym przypadku addEventListener jest Higher Order Function
+//function(event) jest w tym przypadku callback Function - umożliwia nam czekanie na coś co ma się zakończyć
+
+// mozemy przekazywać funkcje jako parametry
+// mozemy też miec funcke jako callback (co otrzymujemy po tym jak event nastąpił)
 
 function makeSound(key) {
 
@@ -54,6 +64,11 @@ function makeSound(key) {
         default: console.log(buttonInnerHTML);
             break;
     }
+}
+
+
+function buttonAnimation(currentKey) {
+    var activeButton = document.querySelector("." + currentKey);
 }
 
 //notatki z wykładów ->
