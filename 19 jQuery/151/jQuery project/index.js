@@ -8,3 +8,5 @@
 $("h1").text("Bye"); //zmiana tekstu
 
 $("button").text("Don't Click Me");//wybiera wszytkie przyciski na stronie i zmienia ich tekst
+
+$("button").html("<em>Hey</em>"); //modyfikacja tekstu
