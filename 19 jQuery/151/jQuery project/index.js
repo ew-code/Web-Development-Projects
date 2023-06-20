@@ -20,7 +20,6 @@ $("h1").addClass("big-title margin-50"); //adding classes to element in jQuery
 //
 // 157  Adding Event Listeners with jQuery
 
-
 // clickListener
 // $("button").click(function () {
     // $("h1").css("color", "purple");
@@ -42,6 +41,10 @@ $("h1").addClass("big-title margin-50"); //adding classes to element in jQuery
 // });
 
 // jakikolwiek event który bedzie w ()
-$(document).on("mouseover", function() {
-    $("h1").css("color", "purple");
-});
+// $(document).on("mouseover", function() {
+    // $("h1").css("color", "purple");
+// });
+
+// 158 Adding and Removing Elements with JQuery
+
+$("h1").before("<button>NEW</button>");
