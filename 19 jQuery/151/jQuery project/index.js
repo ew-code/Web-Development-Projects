@@ -54,3 +54,5 @@ $("h1").after("<button>NEW</button>"); // <h1>hello</h1><button>New</button>
 $("h1").prepend("<button>NEW</button>"); // <h1><button>New</button>Hello</h1>  różnica między before a prepend - doda element w elemencie który wskazujemy przed just after opening tag
 
 $("h1").append("<button>NEW</button>"); // <h1>Hello<button>New</button></h1> różnica miedzy affter a append - doda element po elemencie ktory wsazujemy just  before the end of the h1
+
+$("button").remove();
