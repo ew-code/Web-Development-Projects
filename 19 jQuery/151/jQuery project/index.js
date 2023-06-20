@@ -47,4 +47,10 @@ $("h1").addClass("big-title margin-50"); //adding classes to element in jQuery
 
 // 158 Adding and Removing Elements with JQuery
 
-$("h1").before("<button>NEW</button>");
+$("h1").before("<button>NEW</button>");  //<button>New</button><h1>hello</h1>
+
+$("h1").after("<button>NEW</button>"); // <h1>hello</h1><button>New</button>
+
+$("h1").prepend("<button>NEW</button>"); // <h1><button>New</button>Hello</h1>  różnica między before a prepend - doda element w elemencie który wskazujemy przed just after opening tag
+
+$("h1").append("<button>NEW</button>"); // <h1>Hello<button>New</button></h1> różnica miedzy affter a append - doda element po elemencie ktory wsazujemy just  before the end of the h1
