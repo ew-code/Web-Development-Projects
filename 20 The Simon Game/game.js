@@ -1,4 +1,8 @@
+let gamePattern = [randomChosenColour]
+
 const buttonColours = ["red", "blue", "green", "yellow"];
+
+let randomChosenColour = buttonColours[randomNumber];
 
 let randomNumber
 
