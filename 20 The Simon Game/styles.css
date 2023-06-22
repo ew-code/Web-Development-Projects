@@ -23,16 +23,16 @@ body {
   height: 200px;
   width: 200px;
   border: 10px solid black;
-  border-radius: 20%;
+  border-radius: 30%;
 }
 
 .game-over {
-  background-color: red;
+  background-color: rgb(247, 3, 3);
   opacity: 0.8;
 }
 
 .red {
-  background-color: red;
+  background-color: rgb(210, 4, 45);
 }
 
 .green {
