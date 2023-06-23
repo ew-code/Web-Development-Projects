@@ -14,16 +14,14 @@ function nextSequence() {
 
 }
 
-function playSound(name) {
-    var audio = new Audio(name);
+function playSound(soundFile) {
+    var audio = new Audio(soundFile);
     audio.play();
 }
 
 $(".btn").on("click", function () {
     let userChosenColour = $(this).attr("id");
+    playSound("./sounds/" + userChosenColour + ".mp3");
     console.log(userChosenColour);
-});
 
-$(".btn").on("click", function () {
-    playSound;
 });
