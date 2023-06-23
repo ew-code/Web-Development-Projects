@@ -10,11 +10,20 @@ function nextSequence() {
 
     $("#" + randomChosenColour).fadeIn(100).fadeOut(100).fadeIn(100);
 
-    var audio = new Audio("./sounds/" + randomChosenColour + ".mp3");
+    playSound("./sounds/" + randomChosenColour + ".mp3");
+
+}
+
+function playSound(name) {
+    var audio = new Audio(name);
     audio.play();
 }
 
 $(".btn").on("click", function () {
     let userChosenColour = $(this).attr("id");
     console.log(userChosenColour);
+});
+
+$(".btn").on("click", function () {
+    playSound;
 });
