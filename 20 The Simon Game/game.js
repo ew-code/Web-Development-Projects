@@ -22,9 +22,8 @@ function playSound(soundFile) {
 $(".btn").on("click", function () {
     let userChosenColour = $(this).attr("id");
     playSound("./sounds/" + userChosenColour + ".mp3");
+    // userClickedPattern.push(userChosenColour);
     animatePress(userChosenColour);
-    console.log(userChosenColour);
-
 });
 
 function animatePress(currentColour) {
@@ -33,3 +32,10 @@ function animatePress(currentColour) {
         $("#" + currentColour).removeClass("pressed");
     }, 100);
 }
+
+$(document).one("keypress", function (event) {
+    nextSequence(level);
+    $("h1").text(event.key);
+
+    let level = 0;
+});
