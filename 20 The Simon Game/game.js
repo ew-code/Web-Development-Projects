@@ -15,13 +15,21 @@ function nextSequence() {
 }
 
 function playSound(soundFile) {
-    var audio = new Audio(soundFile);
+    let audio = new Audio(soundFile);
     audio.play();
 }
 
 $(".btn").on("click", function () {
     let userChosenColour = $(this).attr("id");
     playSound("./sounds/" + userChosenColour + ".mp3");
+    animatePress(userChosenColour);
     console.log(userChosenColour);
 
 });
+
+function animatePress(currentColour) {
+    $("#" + currentColour).addClass("pressed");
+    setTimeout(function () {
+        $("#" + currentColour).removeClass("pressed");
+    }, 100);
+}
