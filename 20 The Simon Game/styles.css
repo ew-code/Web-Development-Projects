@@ -10,7 +10,7 @@ body {
   font-size: 3rem;
   margin:  5%;
   /* color: #FEF2BF; */
-  color: #fce686;
+  color: #fddd51;
 
 }
 
@@ -18,7 +18,6 @@ body {
   display: block;
   width: 50%;
   margin: auto;
-
 }
 
 .btn {
@@ -57,7 +56,6 @@ body {
 
 .blue {
   /* background-color: blue; */
-
    background: #3D94F6;
    background-image: -webkit-linear-gradient(top, #3D94F6, #1E62D0);
    background-image: -moz-linear-gradient(top, #3D94F6, #1E62D0);
