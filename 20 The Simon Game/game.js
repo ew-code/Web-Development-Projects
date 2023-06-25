@@ -1,6 +1,6 @@
 const buttonColor = ["red", "blue", "green", "yellow"];
 let gamePattern = [];
-let userClickedPattern = [];
+let userClickPattern = [];
 let gameStarted = false;
 let level = 0;
 
@@ -15,13 +15,14 @@ $(document).keypress(function () {
 $(".btn").click(function () {
   let userChosenColor = $(this).attr("id");
 
-  userClickedPattern.push(userChosenColor);
+  userClickPattern.push(userChosenColor);
   playSound(userChosenColor);
   animatePress(userChosenColor);
   checkAnswer();
 });
 
 function nextSequence() {
+  // userClickPattern = [];
   level++;
   $("#level-title").text("Level " + level);
   let randomNumber = Math.floor(Math.random() * 4);
@@ -34,7 +35,7 @@ function nextSequence() {
 }
 
 function playSound(soundFile) {
-  var audio = new Audio("./sounds/" + soundFile + ".mp3");
+  let audio = new Audio("./sounds/" + soundFile + ".mp3");
   audio.play();
 }
 
@@ -45,7 +46,23 @@ function animatePress(currentColor) {
   }, 100);
 }
 
-function checkAnswer(currentLevel) {
-  level = array.slice(-1);
-  console.log(currentLevel);
+function checkAnswer(gamePattern, userClickPattern) {
+  const len = gamePattern.length;
+
+  if (len !== userClickPattern.length) {
+    // The lengths of the arrays don't match
+    return false;
+  }
+
+  for (let i = 0; i < len; i++) {
+    if (gamePattern[i] !== userClickPattern[i]) {
+      // The values at the same index don't match
+      return false;
+    }
+  }
+
+  return true;
 }
+
+console.log(checkAnswer(['red', 'blue', 'green'], ['red', 'blue', 'green']));
+console.log(checkAnswer(['red', 'blue', 'green'], ['red', 'yellow', 'green']));
