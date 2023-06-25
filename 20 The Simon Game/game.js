@@ -1,6 +1,6 @@
 const buttonColor = ["red", "blue", "green", "yellow"];
 let gamePattern = [];
-let userClickPattern = [];
+let userPattern = [];
 let gameStarted = false;
 let level = 0;
 
@@ -15,7 +15,7 @@ $(document).keypress(function () {
 $(".btn").click(function () {
   let userChosenColor = $(this).attr("id");
 
-  userClickPattern.push(userChosenColor);
+  userPattern.push(userChosenColor);
   playSound(userChosenColor);
   animatePress(userChosenColor);
   checkAnswer();
@@ -46,16 +46,16 @@ function animatePress(currentColor) {
   }, 100);
 }
 
-function checkAnswer(gamePattern, userClickPattern) {
+function checkAnswer(gamePattern, userPattern) {
   const len = gamePattern.length;
 
-  if (len !== userClickPattern.length) {
+  if (len !== userPattern.length) {
     // The lengths of the arrays don't match
     return false;
   }
 
   for (let i = 0; i < len; i++) {
-    if (gamePattern[i] !== userClickPattern[i]) {
+    if (gamePattern[i] !== userPattern[i]) {
       // The values at the same index don't match
       return false;
     }
