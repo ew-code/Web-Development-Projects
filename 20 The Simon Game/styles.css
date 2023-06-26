@@ -8,23 +8,17 @@ body {
 #level-title {
   font-family: 'Press Start 2P', cursive;
   font-size: 3rem;
-  margin:  5%;
-  /* color: #FEF2BF; */
-  color: #fddd51;
-
+  margin:  2%;
 }
 
 .container {
   display: block;
-  /* width: 50%; */
   margin: auto;
-  
 }
 
 .btn {
   height: 200px;
   width: 200px;
-  /* border: 10px solid black; */
   border-radius: 30%;
 }
 
