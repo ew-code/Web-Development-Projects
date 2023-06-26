@@ -4,7 +4,7 @@ let userPattern = [];
 let gameStarted = false;
 let level = 0;
 
-$(document).on("keydown", function(event) {
+$(document).on("keydown", function (event) {
   if (!gameStarted) {
     $("#level-title").text("Level " + level);
     nextSequence();
@@ -31,7 +31,10 @@ function nextSequence() {
   // Wyświetl guzik sekwencyjnie
   let i = 0;
   let interval = setInterval(function () {
-    $("#" + gamePattern[i]).fadeIn(100).fadeOut(100).fadeIn(100);
+    $("#" + gamePattern[i])
+      .fadeIn(100)
+      .fadeOut(100)
+      .fadeIn(100);
     playSound(gamePattern[i]);
 
     i++;
@@ -39,9 +42,7 @@ function nextSequence() {
       clearInterval(interval);
     }
   }, 1000);
-
   userPattern = []; // Wyczyść userPattern po wyświetleniu sekwencji
-
 }
 
 function playSound(soundFile) {
