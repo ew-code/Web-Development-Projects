@@ -4,7 +4,7 @@ let userPattern = [];
 let gameStarted = false;
 let level = 0;
 
-$(document).keypress(function () {
+$(document).on("keydown", function(event) {
   if (!gameStarted) {
     $("#level-title").text("Level " + level);
     nextSequence();
@@ -14,23 +14,33 @@ $(document).keypress(function () {
 
 $(".btn").click(function () {
   let userChosenColor = $(this).attr("id");
-
   userPattern.push(userChosenColor);
   playSound(userChosenColor);
   animatePress(userChosenColor);
-  checkAnswer();
+  checkAnswer(gamePattern, userPattern);
 });
 
 function nextSequence() {
-  // userClickPattern = [];
   level++;
   $("#level-title").text("Level " + level);
   let randomNumber = Math.floor(Math.random() * 4);
   let randomChosenColor = buttonColor[randomNumber];
 
   gamePattern.push(randomChosenColor);
-  $("#" + randomChosenColor).fadeIn(100).fadeOut(100).fadeIn(100);
-  playSound(randomChosenColor);
+
+  // Wyświetl guzik sekwencyjnie
+  let i = 0;
+  let interval = setInterval(function () {
+    $("#" + gamePattern[i]).fadeIn(100).fadeOut(100).fadeIn(100);
+    playSound(gamePattern[i]);
+
+    i++;
+    if (i >= gamePattern.length) {
+      clearInterval(interval);
+    }
+  }, 1000);
+
+  userPattern = []; // Wyczyść userPattern po wyświetleniu sekwencji
 
 }
 
@@ -46,23 +56,20 @@ function animatePress(currentColor) {
   }, 100);
 }
 
-function checkAnswer(gamePattern, userPattern) {
-  const len = gamePattern.length;
+function checkAnswer(pattern, userInput) {
+  const len = pattern.length;
 
-  if (len !== userPattern.length) {
+  if (len !== userInput.length) {
     // The lengths of the arrays don't match
     return false;
   }
 
   for (let i = 0; i < len; i++) {
-    if (gamePattern[i] !== userPattern[i]) {
+    if (pattern[i] !== userInput[i]) {
       // The values at the same index don't match
       return false;
     }
   }
-
-  return true;
+  nextSequence();
+  // return true;
 }
-
-console.log(checkAnswer(['red', 'blue', 'green'], ['red', 'blue', 'green']));
-console.log(checkAnswer(['red', 'blue', 'green'], ['red', 'yellow', 'green']));
