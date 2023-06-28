@@ -68,6 +68,7 @@ function checkAnswer(pattern, userInput) {
     setTimeout(function () {
       $("body").removeClass("game-over");
     }, 200);
+    $("h1").text("Game Over, Press Any Key to Restart");
     return false;
   }
 
@@ -80,6 +81,7 @@ function checkAnswer(pattern, userInput) {
       setTimeout(function () {
         $("body").removeClass("game-over");
       }, 200);
+      $("h1").text("Game Over, Press Any Key to Restart");
       return false;
     }
   }
