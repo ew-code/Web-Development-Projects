@@ -62,7 +62,9 @@ function checkAnswer(pattern, userInput) {
 
   if (len !== userInput.length) {
     // The lengths of the arrays don't match
-    $("body").addClass("game-over")
+    $("body").addClass("game-over");
+    let wrong = new Audio("./sounds/wrong.mp3");
+    wrong.play();
     return false;
   }
 
@@ -70,6 +72,8 @@ function checkAnswer(pattern, userInput) {
     if (pattern[i] !== userInput[i]) {
       // The values at the same index don't match
       $("body").addClass("game-over");
+      let wrong = new Audio("./sounds/wrong.mp3");
+      wrong.play();
       return false;
     }
   }

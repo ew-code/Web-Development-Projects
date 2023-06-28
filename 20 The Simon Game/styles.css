@@ -1,6 +1,6 @@
 body {
   text-align: center;
-    background-color:#232323
+    /* background-color:#232323 */a
 }
 
 #level-title {
@@ -54,9 +54,6 @@ body {
    background-image: -o-linear-gradient(top, #3D94F6, #1E62D0);
    background-image: -webkit-gradient(to bottom, #3D94F6, #1E62D0);
 }
-
-
-
 
 .yellow {
   /* background-color: yellow; */
