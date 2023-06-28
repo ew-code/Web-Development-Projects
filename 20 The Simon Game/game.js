@@ -62,15 +62,36 @@ function checkAnswer(pattern, userInput) {
 
   if (len !== userInput.length) {
     // The lengths of the arrays don't match
+    $("body").addClass("game-over")
     return false;
   }
 
   for (let i = 0; i < len; i++) {
     if (pattern[i] !== userInput[i]) {
       // The values at the same index don't match
+      $("body").addClass("game-over");
       return false;
     }
   }
   nextSequence();
-  // return true;
+  return true;
 }
+
+// 
+// function checkAnswer(currentLevel) {
+  // 3. Write an if statement inside checkAnswer() to check if the most recent user answer is the same as the game pattern. If so then log "success", otherwise log "wrong".
+  // if (gamePattern[currentLevel] === userPattern[currentLevel]) {
+    // console.log("success");
+    // 4. If the user got the most recent answer right in step 3, then check that they have finished their sequence with another if statement.
+    // if (userPattern.length === gamePattern.length) {
+      // 5. Call nextSequence() after a 1000 millisecond delay.
+      // setTimeout(function () {
+        // nextSequence();
+      // }, 1000);
+    // }
+// 
+  // } else {
+    // console.log("wrong");
+    // $("body").addClass("game-over")
+  // }
+// }
