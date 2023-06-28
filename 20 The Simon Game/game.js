@@ -65,6 +65,9 @@ function checkAnswer(pattern, userInput) {
     $("body").addClass("game-over");
     let wrong = new Audio("./sounds/wrong.mp3");
     wrong.play();
+    setTimeout(function () {
+      $("body").removeClass("game-over");
+    }, 200);
     return false;
   }
 
@@ -74,6 +77,9 @@ function checkAnswer(pattern, userInput) {
       $("body").addClass("game-over");
       let wrong = new Audio("./sounds/wrong.mp3");
       wrong.play();
+      setTimeout(function () {
+        $("body").removeClass("game-over");
+      }, 200);
       return false;
     }
   }
