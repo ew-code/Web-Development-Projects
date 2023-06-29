@@ -111,7 +111,7 @@ function wrongAnswer() {
 function startOver() {
   level = 0;
   gamePattern = [];
-  gameStarted =false;
+  gameStarted = false;
 
 }
 
