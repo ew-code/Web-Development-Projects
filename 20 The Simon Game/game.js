@@ -89,7 +89,7 @@ function checkAnswer(pattern, userInput) {
   return true;
 }
 
-// 
+
 // function checkAnswer(currentLevel) {
   // 3. Write an if statement inside checkAnswer() to check if the most recent user answer is the same as the game pattern. If so then log "success", otherwise log "wrong".
   // if (gamePattern[currentLevel] === userPattern[currentLevel]) {
@@ -101,7 +101,7 @@ function checkAnswer(pattern, userInput) {
         // nextSequence();
       // }, 1000);
     // }
-// 
+
   // } else {
     // console.log("wrong");
     // $("body").addClass("game-over")
