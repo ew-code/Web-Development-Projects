@@ -1,12 +1,21 @@
-body {
-  text-align: center;
-    /* background-color:#232323 */a
+html,
+body,
+.page-container {
+  height: 100%; /* Ustalamy wysokość na 100%, aby cały obszar tła był pokryty */
+  margin: 0; /* Wyłączamy marginesy */
+  padding: 0; /* Wyłączamy padding */
 }
+
+.page-container {
+    height: 100%; /* Ustalamy wysokość na 100%, aby cały obszar tła był pokryty */
+    margin: 0; /* Wyłączamy marginesy */
+    padding: 0; /* Wyłączamy padding */
+  }
 
 #level-title {
   font-family: 'Press Start 2P', cursive;
-  font-size: 3rem;
-  margin:  2%;
+  font-size: 2.5rem;
+  /* margin:  2%; */
 }
 
 .container {
