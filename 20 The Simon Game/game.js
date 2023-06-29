@@ -87,7 +87,6 @@ function animatePress(currentColor) {
 
 // function checkAnswer(pattern, userInput) {
   // const len = pattern.length;
-//
   // if (len !== userInput.length) { // The lengths of the arrays don't match
     // wrongAnswer();
     // startOver();
