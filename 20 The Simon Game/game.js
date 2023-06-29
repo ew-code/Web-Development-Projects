@@ -23,6 +23,7 @@ $(".btn").click(function () {
 function nextSequence() {
   level++;
   $("#level-title").text("Level " + level);
+  $("h2").text("");
   let randomNumber = Math.floor(Math.random() * 4);
   let randomChosenColor = buttonColor[randomNumber];
 
@@ -60,28 +61,15 @@ function animatePress(currentColor) {
 function checkAnswer(pattern, userInput) {
   const len = pattern.length;
 
-  if (len !== userInput.length) {
-    // The lengths of the arrays don't match
-    $("body").addClass("game-over");
-    let wrong = new Audio("./sounds/wrong.mp3");
-    wrong.play();
-    setTimeout(function () {
-      $("body").removeClass("game-over");
-    }, 200);
-    $("h1").text("Game Over, Press Any Key to Restart");
+  if (len !== userInput.length) { // The lengths of the arrays don't match
+    wrongAnswer();
+    startOver();
     return false;
   }
-
   for (let i = 0; i < len; i++) {
-    if (pattern[i] !== userInput[i]) {
-      // The values at the same index don't match
-      $("body").addClass("game-over");
-      let wrong = new Audio("./sounds/wrong.mp3");
-      wrong.play();
-      setTimeout(function () {
-        $("body").removeClass("game-over");
-      }, 200);
-      $("h1").text("Game Over, Press Any Key to Restart");
+    if (pattern[i] !== userInput[i]) { // The values at the same index don't match
+      wrongAnswer();
+      startOver();
       return false;
     }
   }
@@ -91,19 +79,39 @@ function checkAnswer(pattern, userInput) {
 
 
 // function checkAnswer(currentLevel) {
-  // 3. Write an if statement inside checkAnswer() to check if the most recent user answer is the same as the game pattern. If so then log "success", otherwise log "wrong".
   // if (gamePattern[currentLevel] === userPattern[currentLevel]) {
-    // console.log("success");
-    // 4. If the user got the most recent answer right in step 3, then check that they have finished their sequence with another if statement.
     // if (userPattern.length === gamePattern.length) {
-      // 5. Call nextSequence() after a 1000 millisecond delay.
+
       // setTimeout(function () {
         // nextSequence();
       // }, 1000);
     // }
-
   // } else {
-    // console.log("wrong");
-    // $("body").addClass("game-over")
+    // $("body").addClass("game-over");
+    // let wrong = new Audio("./sounds/wrong.mp3");
+    // wrong.play();
+    // setTimeout(function () {
+      // $("body").removeClass("game-over");
+    // }, 200);
+    // $("h1").text("Game Over, Press Any Key to Restart");
+    // startOver();
   // }
 // }
+
+function wrongAnswer() {
+  $("body").addClass("game-over");
+  let wrong = new Audio("./sounds/wrong.mp3");
+  wrong.play();
+  setTimeout(function () {
+    $("body").removeClass("game-over");
+  }, 200);
+  $("h1").text("Game Over, Press Any Key to Restart");
+}
+
+function startOver() {
+  level = 0;
+  gamePattern = [];
+  gameStarted =false;
+
+}
+
