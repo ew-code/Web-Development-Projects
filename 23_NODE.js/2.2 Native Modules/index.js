@@ -1,7 +1,7 @@
-const fs = require('node:fs/promises');
+const fs = require('fs');
 
 // const data = new Uint8Array(Buffer.from('Hello Node.js'));
-fs.writeFile('message.txt', data, (err) => {
+fs.writeFile('message2.txt', "Hello from NodeJs!", (err) => {
     if (err) throw err;
     console.log('The file has been saved!');
 }); 
