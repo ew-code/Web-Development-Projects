@@ -5,8 +5,6 @@
 */
 
 import inquirer from 'inquirer';
-var qr = require('qr-image');
-
 
 const question = [
     {
@@ -14,7 +12,7 @@ const question = [
         name: 'url',
         message: "Enter your URL",
         default() {
-            return 'https://www.google.com/';
+            return 'https://github.com//';
         },
     },
 ];
@@ -23,13 +21,13 @@ inquirer.prompt(question).then((answers) => {
     return fs.createWriteStream(JSON.stringify(answers, null, '  '));
 });
 
-var fs = require('fs');
+var fs = require('qr-image');
 function file(name) {
     return fs.createWriteStream(__dirname + '/' + name);
 }
 
-var text = qr.imageSync('I love QR!', { type: 'txt' });
+var qr = require('./../');
+var text = answers;
 
 qr.image(text, { type: 'png', ec_level: ec_level, parse_url: true, margin: 1 }).pipe(file('qr_t.png'));
-
 fs.writeFileSync('qr_sync.png', qr.imageSync(text));
