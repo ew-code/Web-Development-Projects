@@ -8,9 +8,12 @@ import inquirer from 'inquirer';
 
 inquirer
     .prompt([
-        "Enter your URL: "
-    ])
-    .then((answers) => {
+        {
+            name: 'website address',
+            message: 'Enter your website address',
+            type: 'input'
+        }])
+    .then((answer) => {
         // Use user feedback for... whatever!!
     })
     .catch((error) => {
@@ -21,8 +24,8 @@ inquirer
         }
     });
 
-inquirer.prompt(question).then((answers) => {
-    return fs.createWriteStream(JSON.stringify(answers, null, '  '));
+inquirer.prompt(question).then((answer) => {
+    return fs.createWriteStream(JSON.stringify(answer, null, '  '));
 });
 
 var fs = require('qr-image');
@@ -31,7 +34,7 @@ function file(name) {
 }
 
 var qr = require('./../');
-var text = answers;
+var text = answer;
 
 qr.image(text, { type: 'png', ec_level: ec_level, parse_url: true, margin: 1 }).pipe(file('qr_t.png'));
 fs.writeFileSync('qr_sync.png', qr.imageSync(text));
