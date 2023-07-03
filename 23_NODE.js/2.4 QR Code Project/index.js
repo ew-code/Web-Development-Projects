@@ -6,16 +6,20 @@
 
 import inquirer from 'inquirer';
 
-const question = [
-    {
-        type: 'input',
-        name: 'url',
-        message: "Enter your URL",
-        default() {
-            return 'https://github.com//';
-        },
-    },
-];
+inquirer
+    .prompt([
+        "Enter your URL: "
+    ])
+    .then((answers) => {
+        // Use user feedback for... whatever!!
+    })
+    .catch((error) => {
+        if (error.isTtyError) {
+            // Prompt couldn't be rendered in the current environment
+        } else {
+            // Something else went wrong
+        }
+    });
 
 inquirer.prompt(question).then((answers) => {
     return fs.createWriteStream(JSON.stringify(answers, null, '  '));
