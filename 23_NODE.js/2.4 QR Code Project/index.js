@@ -13,20 +13,15 @@ inquirer
             message: 'Enter your website address',
             type: 'input'
         }])
-    .then((answer) => {
-        // Use user feedback for... whatever!!
+    .then((answers) => {
+        console.log(JSON.stringify(answers, null, '  '));
+
     })
     .catch((error) => {
         if (error.isTtyError) {
-            // Prompt couldn't be rendered in the current environment
-        } else {
-            // Something else went wrong
-        }
-    });
 
-inquirer.prompt(question).then((answer) => {
-    return fs.createWriteStream(JSON.stringify(answer, null, '  '));
-});
+        }
+    })
 
 var fs = require('qr-image');
 function file(name) {
@@ -34,7 +29,7 @@ function file(name) {
 }
 
 var qr = require('./../');
-var text = answer;
+var text = answers;
 
 qr.image(text, { type: 'png', ec_level: ec_level, parse_url: true, margin: 1 }).pipe(file('qr_t.png'));
 fs.writeFileSync('qr_sync.png', qr.imageSync(text));
