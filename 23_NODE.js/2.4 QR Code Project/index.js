@@ -5,31 +5,57 @@
 */
 
 import inquirer from 'inquirer';
+import qr from "qr-image";
+import fs from "fs";
 
 inquirer
-    .prompt([
-        {
-            name: 'website address',
-            message: 'Enter your website address',
-            type: 'input'
-        }])
+    .prompt([{
+        "message": "Type in your URL: ",
+        "name": "URL"
+    }
+    ])
     .then((answers) => {
-        console.log(JSON.stringify(answers, null, '  '));
-
+        console.log(answers);
+        const url = answers.URL;
+        var qr_svg = qr.image(url);
+        qr_svg.pipe(fs.createWriteStream("gr_img.png"));
     })
     .catch((error) => {
         if (error.isTtyError) {
-
+        } else {
         }
-    })
+    });
 
-var fs = require('qr-image');
-function file(name) {
-    return fs.createWriteStream(__dirname + '/' + name);
-}
 
-var qr = require('./../');
-var text = answers;
 
-qr.image(text, { type: 'png', ec_level: ec_level, parse_url: true, margin: 1 }).pipe(file('qr_t.png'));
-fs.writeFileSync('qr_sync.png', qr.imageSync(text));
+
+
+
+
+// inquirer
+    // .prompt([
+        // {
+            // name: 'website address',
+            // message: 'Enter your website address',
+            // type: 'input'
+        // }])
+    // .then((answers) => {
+        // console.log(JSON.stringify(answers, null, '  '));
+//
+    // })
+    // .catch((error) => {
+        // if (error.isTtyError) {
+//
+        // }
+    // })
+//
+// var fs = require('qr-image');
+// function file(name) {
+    // return fs.createWriteStream(__dirname + '/' + name);
+// }
+//
+// var qr = require('./../');
+// var text = answers;
+//
+// qr.image(text, { type: 'png', ec_level: ec_level, parse_url: true, margin: 1 }).pipe(file('qr_t.png'));
+// fs.writeFileSync('qr_sync.png', qr.imageSync(text));
