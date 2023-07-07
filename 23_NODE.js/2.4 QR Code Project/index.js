@@ -29,37 +29,3 @@ inquirer
         } else {
         }
     });
-
-
-
-
-
-
-
-// inquirer
-    // .prompt([
-        // {
-            // name: 'website address',
-            // message: 'Enter your website address',
-            // type: 'input'
-        // }])
-    // .then((answers) => {
-        // console.log(JSON.stringify(answers, null, '  '));
-//
-    // })
-    // .catch((error) => {
-        // if (error.isTtyError) {
-//
-        // }
-    // })
-//
-// var fs = require('qr-image');
-// function file(name) {
-    // return fs.createWriteStream(__dirname + '/' + name);
-// }
-//
-// var qr = require('./../');
-// var text = answers;
-//
-// qr.image(text, { type: 'png', ec_level: ec_level, parse_url: true, margin: 1 }).pipe(file('qr_t.png'));
-// fs.writeFileSync('qr_sync.png', qr.imageSync(text));
