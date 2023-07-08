@@ -10,12 +10,13 @@ const port = 3000;
     // console.log(`Example app listening on port ${port}`);
 // });
 
-app.get("/", function (request, response) {
-    console.log(request);
+app.get("/", function(request, response){
+    // console.log(request);
+    response.send("Hello");
 });
 
 app.listen(3000, function(){
-    console.log("Server startet on port ${port}");
+    console.log("Server startet on port 3000");
 });
 
 
