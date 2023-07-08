@@ -7,5 +7,5 @@ app.get("/", function (req, res) {
 });
 
 app.listen(3000, function () {
-    console.log("Server startet on port " + port);
+    console.log("Server is running on port " + port);
 });
