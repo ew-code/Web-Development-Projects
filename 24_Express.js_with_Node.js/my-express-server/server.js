@@ -11,7 +11,11 @@ app.get("/contact", function (req, res) {
 });
 
 app.get("/about", function (req, res) {
-    res.send("about me : https://github.com/ew-code");
+    res.send("About me : https://github.com/ew-code");
+});
+
+app.get("/hobbies", function (req, res) {
+    res.send("I love to draw, gaming and creative coding");
 });
 
 app.listen(3000, function(){
@@ -34,5 +38,6 @@ app.listen(3000, function(){
 
 // node server.js (to start)
 // ctrl + C (stop)
+// nodemon server.js ( nodemon start)
 
 // https://expressjs.com/en/starter/hello-world.html
