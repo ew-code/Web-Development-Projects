@@ -11,8 +11,12 @@ app.get("/", function (req, res) {
 
 app.post("/", function (req, res) {
 
-    console.log(req.body);
-    res.send("Tkank you for posting that");
+    // console.log(req.body);
+    num1 = Number(req.body.num1);
+    num2 = Number(req.body.num2);
+    result = num1 + num2;
+    
+    res.send("The result of the calculation is " + result);
 });
 
 app.listen(3000, function () {
