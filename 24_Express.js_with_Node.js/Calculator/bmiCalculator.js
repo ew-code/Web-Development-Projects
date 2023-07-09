@@ -16,7 +16,13 @@ app.post("/", function (req, res) {
     height = Number(req.body.height);
     result = weight + height;
 
-    res.send("The result of the calculation is " + result);
+    function calcBmi(weight, height) {
+        var bmi = weight / Math.pow(height, 2);
+        return Math.round(bmi);
+    }
+    var bmi = calcBmi(weight, height);
+
+    res.send("Your BMI is: " + bmi);
 });
 
 app.listen(3000, function () {
