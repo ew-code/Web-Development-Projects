@@ -17,8 +17,9 @@ app.get("/", function (req, res) {
             const temp = weatherData.list[0].main.temp
             const weatherDescription = weatherData.list[0].weather[0].description
              // console.log(weatherData);
-            console.log(temp);
-            console.log(weatherDescription);
+            // console.log(temp);
+            // console.log(weatherDescription);
+            res.send("<h1>The temperature in Warsaw is " + temp + " degrees Celcius.</h1>");
             // const object = {
                 // name: "Eweli",
                 // favouriteFood: "Ramen"
@@ -27,7 +28,7 @@ app.get("/", function (req, res) {
         });
     });
 
-    res.send("Server is up and running");
+    // res.send("Server is up and running");
 });
 
 app.listen(3000, function () {
