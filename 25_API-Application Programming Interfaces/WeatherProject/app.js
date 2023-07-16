@@ -12,13 +12,9 @@ app.get("/", function (req, res) {
     https.get(url, function (response) {
         console.log(response);
     })
-    
+
     res.send("Server is up and running");
 });
-
-
-
-
 
 app.listen(3000, function () {
     console.log("Server is running on port " + port);
