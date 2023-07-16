@@ -19,7 +19,9 @@ app.get("/", function (req, res) {
              // console.log(weatherData);
             // console.log(temp);
             // console.log(weatherDescription);
-            res.send("<h1>The temperature in Warsaw is " + temp + " degrees Celcius.</h1>");
+            res.write("<h1>The temperature in Warsaw is " + temp + " degrees Celcius.</h1>");
+            res.write("<p>The weather is currently: </p>" + weatherDescription);
+            res.send()
             // const object = {
                 // name: "Eweli",
                 // favouriteFood: "Ramen"
