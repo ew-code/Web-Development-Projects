@@ -15,8 +15,10 @@ app.get("/", function (req, res) {
         response.on('data', (d) => {
             const weatherData = JSON.parse(d)
             const temp = weatherData.list[0].main.temp
+            const weatherDescription = weatherData.list[0].weather[0].description
              // console.log(weatherData);
             console.log(temp);
+            console.log(weatherDescription);
             // const object = {
                 // name: "Eweli",
                 // favouriteFood: "Ramen"
