@@ -13,14 +13,17 @@ app.get("/", function (req, res) {
         console.log(response.statusCode);
 
         response.on('data', (d) => {
-            const weatherData = JSON.parse(d)
-            const temp = weatherData.list[0].main.temp
-            const weatherDescription = weatherData.list[0].weather[0].description
-             // console.log(weatherData);
+            const weatherData = JSON.parse(d);
+            const temp = weatherData.list[0].main.temp;
+            const weatherDescription = weatherData.list[0].weather[0].description;
+            const icon = weatherData.list[0].weather[0].icon;
+            const imageURL = "https://openweathermap.org/img/wn/" + icon + ".png";
+            // console.log(weatherData);
             // console.log(temp);
             // console.log(weatherDescription);
+            res.write("<p>The weather is currently</p> " + weatherDescription);
             res.write("<h1>The temperature in Warsaw is " + temp + " degrees Celcius.</h1>");
-            res.write("<p>The weather is currently: </p>" + weatherDescription);
+            res.write("<img src=" + imageURL + ">");
             res.send()
             // const object = {
                 // name: "Eweli",
