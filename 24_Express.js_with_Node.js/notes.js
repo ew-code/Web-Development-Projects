@@ -6,7 +6,7 @@
 // -Inside the APP folder, create a new file called app.js
 // -Set up a new NPM package (npm init)
 // -Open the project folder in vsCode 
-// -Using NPM install the express module
+// -Using NPM install the express module (npm i express)
 // -Require express in your app.js
 // -Setup express
 // -Create a root route get method with app.get()
