@@ -7,7 +7,10 @@ const port = 3000;
 //make get request to external server node -> https://www.twilio.com/blog/http-requests-in-node-js.html
 //https://nodejs.org/api/https.html -> https://nodejs.org/api/https.html#httpsgeturl-options-callback
 app.get("/", function (req, res) {
-    const url = "https://api.openweathermap.org/data/2.5/forecast?id=524901&appid=ad8e5204b70c5930d2d7d2b9298450f6&q=Warsaw&units=metric";
+    const query = "Warsaw";
+    const apiKey = "ad8e5204b70c5930d2d7d2b9298450f6";
+    const unit = "metric";
+    const url = "https://api.openweathermap.org/data/2.5/forecast?id=524901&appid=" + apiKey +"&q=" + query +"&units="+ unit +"";
 
     https.get(url, function (response) {
         console.log(response.statusCode);
