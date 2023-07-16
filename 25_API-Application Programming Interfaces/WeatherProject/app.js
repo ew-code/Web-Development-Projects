@@ -10,8 +10,12 @@ app.get("/", function (req, res) {
     const url = "https://api.openweathermap.org/data/2.5/forecast?id=524901&appid=ad8e5204b70c5930d2d7d2b9298450f6&q=Warsaw&units=metric";
 
     https.get(url, function (response) {
-        console.log(response);
-    })
+        console.log(response.statusCode);
+
+        response.on('data', (d) => {
+            process.stdout.write(d);
+        });
+    });
 
     res.send("Server is up and running");
 });
