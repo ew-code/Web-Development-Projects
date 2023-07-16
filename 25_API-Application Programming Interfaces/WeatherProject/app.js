@@ -13,7 +13,15 @@ app.get("/", function (req, res) {
         console.log(response.statusCode);
 
         response.on('data', (d) => {
-            process.stdout.write(d);
+            const weatherData = JSON.parse(d)
+            const temp = weatherData.list[0].main.temp
+             // console.log(weatherData);
+            console.log(temp);
+            // const object = {
+                // name: "Eweli",
+                // favouriteFood: "Ramen"
+            // }
+            // console.log(JSON.stringify(object));
         });
     });
 
