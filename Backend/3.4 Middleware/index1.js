@@ -13,6 +13,10 @@ app.get("/", (req, res) => {
 
 app.use(bodyParser.urlencoded({ extended: true }));
 
+app.post("/submit", (req, res) => {
+  console.log(req.body);
+});
+
 app.listen(port, () => {
   console.log(`Listening on port ${port}`);
 });
