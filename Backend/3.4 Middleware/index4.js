@@ -18,7 +18,7 @@ app.post("/submit", (req, res) => {
   let pet = String(req.body.pet);
   let result = street + pet;
 
-  res.send("Your band name is: " + result);
+  res.send("<h1>Your band name is: </h1>" + "<h2>" + result + "&#9996;</h2>");
 
   console.log(req.body);
 });
