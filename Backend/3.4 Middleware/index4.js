@@ -14,6 +14,12 @@ app.get("/", (req, res) => {
 });
 
 app.post("/submit", (req, res) => {
+  let street = String(req.body.street);
+  let pet = String(req.body.pet);
+  let result = street + pet;
+
+  res.send("Your band name is: " + result);
+
   console.log(req.body);
 });
 
