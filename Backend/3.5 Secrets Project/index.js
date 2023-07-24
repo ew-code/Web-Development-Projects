@@ -3,7 +3,7 @@
 //The password is ILoveProgramming
 
 import express from "express";
-import bodyParser from "body-parser";
+// import bodyParser from "body-parser";
 
 import { dirname } from "path";
 import { fileURLToPath } from "url";
@@ -15,7 +15,8 @@ const port = 3000;
 
 let userIsAuthorised = false;
 
-app.use(bodyParser.urlencoded({ extended: true }));
+app.use(express.urlencoded({ extended: true }));
+// app.use(bodyParser.urlencoded({ extended: true }));
 
 function passwordCheck(req, res, next) {
     const password = req.body["password"];
