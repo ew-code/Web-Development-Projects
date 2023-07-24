@@ -12,24 +12,33 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 
 const app = express();
 const port = 3000;
+
+var userIsAuthorised = false;
+
 let secrets = "ILoveProgramming";
 
 app.use(bodyParser.urlencoded({ extended: true }));
 
-function secretsGenerator(req, res, next) {
-    console.log(req.body);
-    secrets = req.body["password"]
+function passwordCheck(req, res, next) {
+    const password = req.body["password"];
+    if (password === "ILoveProgramming") {
+        userIsAuthorised = true;
+    }
     next();
 }
-
-app.use(secretsGenerator);
+app.use(passwordCheck);
 
 app.get("/", (req, res) => {
     res.sendFile(__dirname + "/public/index.html");
 });
 
 app.post("/check", (req, res) => {
-    res.sendFile(__dirname + "/public/secret.html");
+    if (userIsAuthorised) {
+        res.sendFile(__dirname + "/public/secret.html");
+    } else {
+        res.sendFile(__dirname + "/public/index.html");
+        //Alternatively res.redirect("/");
+    }
 });
 
 app.listen(port, () => {
