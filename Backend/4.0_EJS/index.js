@@ -30,13 +30,13 @@ app.get("/", (req, res) => {
     res.send(__dirname + "/views/index.ejs");
 });
 
-app.post("/", (req, res) => {
-    if (week) {
-        res.render(__dirname + "/views/index.ejs" , { name: req.body["name"]});
-    } else {
-        res.render(__dirname + "/views/index.ejs",{ name: req.body["name"] });
-    }
-});
+// app.post("/", (req, res) => {
+    // if (week) {
+        // res.render(__dirname + "/views/index.ejs" , { name: req.body["name"]});
+    // } else {
+        // res.render(__dirname + "/views/index.ejs",{ name: req.body["name"] });
+    // }
+// });
 
 app.listen(port, () => {
     console.log(`Listening on port ${port}`);
