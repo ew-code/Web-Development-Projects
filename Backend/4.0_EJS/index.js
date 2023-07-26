@@ -24,7 +24,6 @@ function dayCheck(req, res, next) {
     next();
 }
 
-
 app.use(dayCheck);
 
 app.get("/", (req, res) => {
