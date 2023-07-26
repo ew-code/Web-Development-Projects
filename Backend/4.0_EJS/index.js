@@ -27,7 +27,7 @@ function dayCheck(req, res, next) {
 app.use(dayCheck);
 
 app.get("/", (req, res) => {
-    res.send(__dirname + "/public/index.html");
+    res.send(__dirname + "/views/index.ejs");
 });
 
 app.post("/", (req, res) => {
