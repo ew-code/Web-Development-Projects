@@ -33,9 +33,9 @@ app.get("/", (req, res) => {
 
 app.post("/", (req, res) => {
     if (week) {
-        res.sendFile(__dirname + "/public/secret.html");
+        res.render(__dirname + "/views/index.ejs" , { name: req.body["name"]});
     } else {
-        res.sendFile(__dirname + "/public/index.html");
+        res.render(__dirname + "/views/index.ejs",{ name: req.body["name"] });
     }
 });
 
