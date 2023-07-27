@@ -12,8 +12,12 @@ const port = 3000;
 app.use(bodyParser.urlencoded({ extended: true }));
 
 function dayCheck(req, res, next) {
+
+    const weekday = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+    const weekend = ["Sunday","Saturday"];
+
     const d = new Date();
-    let day = d.getDay();
+    let day = weekday[d.getDay()];
 
     console.log(day);
 
