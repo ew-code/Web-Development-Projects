@@ -13,11 +13,11 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 function dayCheck(req, res, next) {
 
-    const weekday = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+    const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
     const weekend = ["Sunday","Saturday"];
 
     const d = new Date();
-    let day = weekday[d.getDay()];
+    let day = days[d.getDay()];
 
     console.log(day);
 
