@@ -12,19 +12,17 @@ const port = 3000;
 app.use(bodyParser.urlencoded({ extended: true }));
 
 function dayCheck(req, res, next) {
-
     const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
-    const weekend = ["Sunday","Saturday"];
+    const weekend = ["Sunday", "Saturday"];
 
     const d = new Date();
     let day = days[d.getDay()];
 
-    console.log(day);
-
-    // const password = req.body["password"];
-    // if (password === "ILoveProgramming") {
-        // userIsAuthorised = true;
-    // }
+    if (["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"].includes(day)) {
+        console.log("week");
+    } else if (weekend.includes(day)) {
+        console.log("weekend");
+    }
     next();
 }
 
