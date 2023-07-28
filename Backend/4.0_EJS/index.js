@@ -13,12 +13,13 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 function dayCheck(req, res, next) {
     const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+    // const week = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"];
     const weekend = ["Sunday", "Saturday"];
 
     const d = new Date();
     let day = days[d.getDay()];
 
-    if (["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"].includes(day)) {
+    if (days.includes(day)) {
         console.log("week");
     } else if (weekend.includes(day)) {
         console.log("weekend");
