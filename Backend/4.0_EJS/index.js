@@ -20,26 +20,23 @@ function dayCheck(req, res, next) {
     let day = days[d.getDay()];
 
     if (days.includes(day)) {
-        res.send("Hey!It's a weekday, it's time to work hard!");
+        res.send("Hey! It's a weekday, it's time to work hard!");
     } else if (weekend.includes(day)) {
-        res.send("Hey!It's the weekend, it's time to have fun!");
+        res.send("Hey! It's the weekend, it's time to have fun!");
     }
     next();
 }
 
 app.use(dayCheck);
 
-app.get("/", (req, res) => {
-    res.send(__dirname + "/views/index.ejs");
-});
-
-// app.post("/", (req, res) => {
-    // if (week) {
-        // res.render(__dirname + "/views/index.ejs" , { name: req.body["name"]});
-    // } else {
-        // res.render(__dirname + "/views/index.ejs",{ name: req.body["name"] });
-    // }
+// app.get("/", (req, res) => {
+    // res.send(__dirname + "/views/index.ejs");
 // });
+
+app.post("/", (req, res) => {
+    res.render(__dirname + "/views/index.ejs",
+    { name: req.body["name"] });
+});
 
 app.listen(port, () => {
     console.log(`Listening on port ${port}`);
