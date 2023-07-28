@@ -35,7 +35,7 @@ app.use(dayCheck);
 
 app.post("/", (req, res) => {
     res.render(__dirname + "/views/index.ejs",
-    { name: req.body["name"] });
+        { name: req.body["dayCheck"] });
 });
 
 app.listen(port, () => {
