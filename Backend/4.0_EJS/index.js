@@ -20,9 +20,9 @@ function dayCheck(req, res, next) {
     let day = days[d.getDay()];
 
     if (days.includes(day)) {
-        console.log("week");
+        res.send("Hey!It's a weekday, it's time to work hard!");
     } else if (weekend.includes(day)) {
-        console.log("weekend");
+        res.send("Hey!It's the weekend, it's time to have fun!");
     }
     next();
 }
