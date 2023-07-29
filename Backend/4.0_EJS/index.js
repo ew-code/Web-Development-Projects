@@ -6,7 +6,7 @@ const port = 3000;
 
 app.get("/", (req, res) => {
     const today = new Date();
-    let day = week[d.getDay()];
+    const day = today.getDay();
     res.render("index.ejs", { dayType: "a weekday", advice: "it's time to work hard" });
 });
 
@@ -16,10 +16,7 @@ app.get("/", (req, res) => {
     // const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
     // const week = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"];
     // const weekend = ["Sunday", "Saturday"];
-// 
-  
-  
-// 
+
     // if (week.includes(day)) {
         // res.send("Hey! It's a weekday, it's time to work hard!");
     // } else if (weekend.includes(day)) {
