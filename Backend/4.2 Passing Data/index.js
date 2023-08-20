@@ -6,9 +6,17 @@ const port = 3000;
 
 app.use(bodyParser.urlencoded({ extended: true }));
 
-app.get("/", (req, res) => {});
+app.get("/", (req, res) => {
+  const title = "There are";
 
-app.post("/submit", (req, res) => {});
+  res.render("index.ejs");
+});
+
+app.post("/submit", (req, res) => {
+  // res.render("index.ejs",
+    // { name: req.body["fName"] }
+  // );
+});
 
 app.listen(port, () => {
   console.log(`Server running on port ${port}`);
