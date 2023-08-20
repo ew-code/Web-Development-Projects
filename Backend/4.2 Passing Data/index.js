@@ -7,15 +7,18 @@ const port = 3000;
 app.use(bodyParser.urlencoded({ extended: true }));
 
 app.get("/", (req, res) => {
-  const title = "There are";
+  const numberOfLetters = fName + lName;
 
-  res.render("index.ejs");
+  res.render("index.ejs", {
+    number: numberOfLetters,
+  }
+  );
 });
 
 app.post("/submit", (req, res) => {
-  // res.render("index.ejs",
-    // { name: req.body["fName"] }
-  // );
+  res.render("index.ejs",
+    { name: req.body["fName"] }
+  );
 });
 
 app.listen(port, () => {
