@@ -14,6 +14,8 @@ app.use(express.static("public"));
 //Step 4 - Add a dynamic year to the footer.
 //Hint: Google to find out how to get the current year using JS.
 
+app.getElementById("year").innerHTML = new Date().getFullYear();
+
 app.use(bodyParser.urlencoded({ extended: true }));
 
 app.get("/", (req, res) => {
@@ -31,7 +33,6 @@ app.post("/submit", (req, res) => {
   //3. Test to make sure that the random words display in the h1 element in index.ejs
 });
 
-app.getElementById("year").innerHTML = new Date().getFullYear();
 
 app.listen(port, () => {
   console.log(`Listening on port ${port}`);
