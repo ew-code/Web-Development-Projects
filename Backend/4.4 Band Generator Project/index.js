@@ -17,7 +17,7 @@ app.use(express.static("public"));
 app.use(bodyParser.urlencoded({ extended: true }));
 
 app.get("/", (req, res) => {
-  res.render("");
+  res.render("index.ejs");
   //Step 1 - Make the get route work and render the index.ejs file.
 });
 
@@ -30,6 +30,8 @@ app.post("/submit", (req, res) => {
   //2. Send the index.ejs as a response and add the adjective and noun to the res.render
   //3. Test to make sure that the random words display in the h1 element in index.ejs
 });
+
+app.getElementById("year").innerHTML = new Date().getFullYear();
 
 app.listen(port, () => {
   console.log(`Listening on port ${port}`);
