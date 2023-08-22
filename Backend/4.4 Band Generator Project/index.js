@@ -14,9 +14,13 @@ app.use(express.static("public"));
 //Step 4 - Add a dynamic year to the footer.
 //Hint: Google to find out how to get the current year using JS.
 
-app.getElementById("year").innerHTML = new Date().getFullYear();
-
 app.use(bodyParser.urlencoded({ extended: true }));
+
+app.get("/footer", (res, req) => {
+  let currentYear = req.body["year"].currentTime.getFullYear();
+  
+  res.render("footer.ejs", { year: currentYear });
+});
 
 app.get("/", (req, res) => {
   res.render("index.ejs");
