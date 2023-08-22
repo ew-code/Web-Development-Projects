@@ -16,12 +16,6 @@ app.use(express.static("public"));
 
 app.use(bodyParser.urlencoded({ extended: true }));
 
-app.get("/footer", (res, req) => {
-  let currentYear = req.body["year"].currentTime.getFullYear();
-  
-  res.render("footer.ejs", { year: currentYear });
-});
-
 app.get("/", (req, res) => {
   res.render("index.ejs");
   //Step 1 - Make the get route work and render the index.ejs file.
