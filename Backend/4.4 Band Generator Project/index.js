@@ -43,8 +43,10 @@ app.post("/submit", (req, res) => {
   const adjective = getRandomAdj();
   const nouns = getRandomNoun();
 
-  res.render("index.ejs", { adjective, nouns }); // Pass adjective and noun to the template
-  console.log("index.ejs", { adjective, nouns });
+  const generator = adjective + '' + '' + nouns;
+
+  res.render("index.ejs", {generator}); // Pass adjective and noun to the template
+  console.log("index.ejs", {generator});
 });
 
 
