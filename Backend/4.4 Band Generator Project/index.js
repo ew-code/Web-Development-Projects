@@ -43,9 +43,7 @@ app.post("/submit", (req, res) => {
   const adjective = getRandomAdj();
   const nouns = getRandomNoun();
 
-  const generator = adjective + ' ' + nouns
-
-  res.render(`<h1>${generator}</h1>`);
+  res.render("index.js", { adjective: adjective, noun: nouns });
 });
 
 
