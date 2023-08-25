@@ -6,8 +6,9 @@
     But when the user first goes on the website and there is no adjective and noun,
     Show the default h1 below -->
 <% if (locals.adjective && locals.noun) { %>
-<h2><%= adjective %> <%= noun %></h2>
-<%} else { %>
+<h1><%= adjective %> 
+  <%= noun %></h1>
+<% } else { %>
 <h1>Welcome to Band Generator</h1>
 <% } %>
 
