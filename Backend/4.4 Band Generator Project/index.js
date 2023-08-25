@@ -45,8 +45,10 @@ app.post("/submit", (req, res) => {
 
   const generator = adjective + ' ' + nouns;
 
-  res.render("index.ejs", { generator });
-  console.log("index.ejs", { generator });
+  // res.render("index.ejs", { generator });
+  res.send(`<h1>${generator}</h1>`);
+  console.log(`<h1>${generator}</h1>`);
+  // console.log("index.ejs", (`<h1>${generator}</h1>`));
 });
 
 
