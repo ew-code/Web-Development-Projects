@@ -1,0 +1,12 @@
+{
+  "name": "4.5-to-do-list-application",
+  "version": "1.0.0",
+  "description": "To Do List",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ewelina",
+  "license": "ISC"
+}
