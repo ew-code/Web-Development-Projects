@@ -1,23 +1,25 @@
 <!DOCTYPE html>
-  <%- include("partials/header.ejs") %>
-<body>
+<%- include("partials/header.ejs") %>
 
-<h1>TO DO FLOW</h1>
- <h2> <%= date %> </h2>
+  <body>
 
-<ul>
-  <li> <%= newListItem %></li>
-</ul>
+    <h1>TO DO FLOW</h1>
+    <h2>
+      <%= date %>
+    </h2>
+    <ul>
+      <% for( let i=0; i < newListItem.length; i++ ) { %>
+        <li>
+          <%= newListItem[i] %>
+        </li>
+        <% } %>
+          <form action="/" method="POST">
+            <input type="text" name="newItem">
+            <button type="submit" value="Add">Add</button>
+          </form>
+    </ul>
 
-<form action="/" method="POST">
-  <input type="text" name="newItem">
- <button type="submit" value="Add">Add</button>
-</form>
+  </body>
+  <%- include("partials/footer.ejs") %>
 
-</body>
-<%- include("partials/footer.ejs") %>
-
-</html>
-
-
-
+    </html>

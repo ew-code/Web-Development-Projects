@@ -7,17 +7,17 @@ const port = 3000;
 
 app.use(express.static("public"));
 app.use(bodyParser.urlencoded({ extended: true }));
-let newItem = ""
+let newItems = [];
 
 app.get("/", (req, res) => {
     const fullDate = dateFormat("fullDate");
-
-    res.render("index.ejs", { date: fullDate, newListItem: newItem });
+    res.render("index.ejs", { date: fullDate, newListItem: newItems });
     console.log(fullDate);
 });
 
 app.post("/", (req, res) => {
-    newItem = req.body.newItem;
+    let newItem = req.body.newItem;
+    newItems.push(newItem);
     res.redirect("/");
 });
 
