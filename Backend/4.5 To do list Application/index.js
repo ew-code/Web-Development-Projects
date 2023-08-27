@@ -7,13 +7,12 @@ const port = 3000;
 
 app.use(express.static("public"));
 app.use(bodyParser.urlencoded({ extended: true }));
-app.use(dateFormat);
 
 app.get("/", (req, res) => {
     const fullDate = dateFormat("fullDate");
 
 
-    // res.render("index.ejs");
+    res.send(fullDate);
     console.log(fullDate);
 });
 
