@@ -12,7 +12,7 @@ let newItems = [];
 app.get("/", (req, res) => {
     const fullDate = dateFormat("fullDate");
     res.render("index.ejs", { date: fullDate, newListItem: newItems });
-    console.log(fullDate);
+    // console.log(fullDate);
 });
 
 app.post("/", (req, res) => {
