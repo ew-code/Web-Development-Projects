@@ -12,7 +12,7 @@ app.get("/", (req, res) => {
     const fullDate = dateFormat("fullDate");
 
 
-    res.render("index.ejs");
+    res.render("index.ejs", { date : fullDate});
     console.log(fullDate);
 });
 

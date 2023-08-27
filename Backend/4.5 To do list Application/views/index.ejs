@@ -2,13 +2,15 @@
   <%- include("partials/header.ejs") %>
 <body>
 
-<h1>To Do Flow</h1>
- <h2>date</h2>
-
+<h1>TO DO FLOW</h1>
+ <h2> <%= date %> </h2>
 <form action="/submit" method="POST">
-  <input type="submit" value="Generate Name" />
+  <input type="submit" value="Add" />
 </form>
 
+<ul>
+  <li></li>
+</ul>
 
 </body>
 <%- include("partials/footer.ejs") %>
