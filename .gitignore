@@ -7,3 +7,19 @@
 
 # Local History for Visual Studio Code
 .history/
+Backend/capstone-todolist-main/.gitignore
+Backend/capstone-todolist-main/index.js
+Backend/capstone-todolist-main/package-lock.json
+Backend/capstone-todolist-main/package.json
+Backend/capstone-todolist-main/Procfile
+Backend/capstone-todolist-main/README.md
+Backend/capstone-todolist-main/.microtica/Dockerfile
+Backend/capstone-todolist-main/.microtica/kube.config
+Backend/capstone-todolist-main/.microtica/microtica.yaml
+Backend/capstone-todolist-main/.microtica/schema.json
+Backend/capstone-todolist-main/.microtica/template.yaml
+Backend/capstone-todolist-main/public/images/circle-plus-solid.svg
+Backend/capstone-todolist-main/public/styles/main.css
+Backend/capstone-todolist-main/views/index.ejs
+Backend/capstone-todolist-main/views/partials/footer.ejs
+Backend/capstone-todolist-main/views/partials/header.ejs
