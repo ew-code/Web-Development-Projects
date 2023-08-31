@@ -24,6 +24,9 @@ Backend/capstone-todolist-main/views/index.ejs
 Backend/capstone-todolist-main/views/partials/footer.ejs
 Backend/capstone-todolist-main/views/partials/header.ejs
 
+#Project-wide
+.DS_Store
+
 # Logs
 logs
 *.log
