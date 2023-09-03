@@ -13,14 +13,28 @@ app.use(express.static("public"));
 app.use(bodyParser.urlencoded({ extended: true }));
 
 app.get("/", (req, res) => {
-  res.render("index.ejs");
+  const data = JSON.parse(recipeJSON);
+  const ingredients = data.ingredients;
+  const recipe = {
+    id: '0001',
+    type: 'taco',
+    name: 'Chicken Taco',
+    ingredients: { protein: [Object], salsa: [Object], toppings: [Array] }
+  };
+  res.render("index.ejs", data);
+  console.log(data);
 });
 
 app.post("/recipe", (req, res) => {
-  const data = JSON.parse(recipeJSON);
-  //Step 3: Write your code here to make this behave like the solution website.
-  //Step 4: Add code to views/index.ejs to use the recieved recipe object.
-  res.render("index.ejs", data);
+  const ingredients = {
+    protein: [],
+    salsa: [],
+    toppings: [],
+  };
+  // Step 3: Write your code here to make this behave like the solution website.
+  // Step 4: Add code to views/index.ejs to use the recieved recipe object.
+  res.render("index.ejs", ingredients);
+  console.log(ingredients);
 });
 
 app.listen(port, () => {
