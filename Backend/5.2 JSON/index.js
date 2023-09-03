@@ -20,7 +20,7 @@ app.post("/recipe", (req, res) => {
   const data = JSON.parse(recipeJSON);
   //Step 3: Write your code here to make this behave like the solution website.
   //Step 4: Add code to views/index.ejs to use the recieved recipe object.
-  res.render("index.ejs");
+  res.render("index.ejs", data);
 });
 
 app.listen(port, () => {
