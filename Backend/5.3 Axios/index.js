@@ -26,9 +26,10 @@ app.get("/", async (req, res) => {
   }
 });
 
-app.post("/filter", async (req, res) => {
+app.post("/", async (req, res) => {
   console.log(req.body);
-
+  try {
+   
   // Step 2: Play around with the drop downs and see what gets logged.
   // Use axios to make an API request to the /filter endpoint. Making
   // sure you're passing both the type and participants queries.
@@ -37,9 +38,12 @@ app.post("/filter", async (req, res) => {
   // Step 3: If you get a 404 error (resource not found) from the API request.
   // Pass an error to the index.ejs to tell the user:
   // "No activities that match your criteria."
-  res.render("index.ejs", {
+   } catch (error) {
+    console.error("Failed to make request:", error.message);
+    res.render("index.ejs", {
     error: error.message,
   });
+}
 });
 
 app.listen(port, () => {
