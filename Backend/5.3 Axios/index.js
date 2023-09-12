@@ -30,6 +30,7 @@ app.post("/", async (req, res) => {
   console.log(req.body);
   const { type, participants} = req.body;
   try {
+    const response = await axios.get("https://bored-api.appbrewery.com/random");
     const randomActivity = response.data.activity;
   // Step 2: Play around with the drop downs and see what gets logged.
   // Use axios to make an API request to the /filter endpoint. Making
